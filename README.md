@@ -2,7 +2,7 @@
 
 [![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/parsedown/parsedown/unit-tests.yaml?logo=github%20actions&logoColor=white)](https://github.com/parsedown/parsedown/actions/workflows/unit-tests.yaml)
 ![Packagist Version](https://img.shields.io/packagist/v/parsedown/parsedown?label=stable)
-[![Packagist Total Downloads](https://img.shields.io/packagist/dt//parsedown?color=blue)](https://packagist.org/packages/parsedown/parsedown)
+[![Packagist Total Downloads](https://img.shields.io/packagist/dt/parsedown/parsedown?color=blue)](https://packagist.org/packages/parsedown/parsedown)
 [![GitHub License](https://img.shields.io/github/license/parsedown/parsedown?color=teal)
 ](https://github.com/parsedown/parsedown?tab=MIT-1-ov-file#MIT-1-ov-file)
 [![Matrix](https://img.shields.io/matrix/parsedown%3Amatrix.org?logo=element)](https://matrix.to/#/#parsedown:matrix.org)
