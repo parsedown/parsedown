@@ -4,4 +4,6 @@
 /.gitignore         export-ignore
 /.mailmap           export-ignore
 /.github            export-ignore
+/.logo.png          export-ignore
+/.logo.svg          export-ignore
 /phpunit.xml.dist   export-ignore
