@@ -167,7 +167,7 @@ class Parsedown
     protected function linesElements(array $lines)
     {
         $Elements = array();
-        $CurrentBlock = null;
+        $CurrentBlock = [];
 
         foreach ($lines as $line)
         {
@@ -253,7 +253,7 @@ class Parsedown
 
                     if ( ! isset($Block['identified']))
                     {
-                        if (isset($CurrentBlock))
+                        if (!empty($CurrentBlock))
                         {
                             $Elements[] = $this->extractElement($CurrentBlock);
                         }
@@ -274,7 +274,7 @@ class Parsedown
 
             # ~
 
-            if (isset($CurrentBlock) and $CurrentBlock['type'] === 'Paragraph')
+            if (!empty($CurrentBlock) and $CurrentBlock['type'] === 'Paragraph')
             {
                 $Block = $this->paragraphContinue($Line, $CurrentBlock);
             }
@@ -285,7 +285,7 @@ class Parsedown
             }
             else
             {
-                if (isset($CurrentBlock))
+                if (!empty($CurrentBlock))
                 {
                     $Elements[] = $this->extractElement($CurrentBlock);
                 }
@@ -348,7 +348,7 @@ class Parsedown
 
     protected function blockCode($Line, $Block = array())
     {
-        if (isset($Block) and $Block['type'] === 'Paragraph' and ! isset($Block['interrupted']))
+        if (!empty($Block) and $Block['type'] === 'Paragraph' and ! isset($Block['interrupted']))
         {
             return;
         }
@@ -571,7 +571,7 @@ class Parsedown
     #
     # List
 
-    protected function blockList($Line, ?array $CurrentBlock = null)
+    protected function blockList($Line, array $CurrentBlock = array())
     {
         list($name, $pattern) = $Line['text'][0] <= '-' ? array('ul', '[*+-]') : array('ol', '[0-9]{1,9}+[.\)]');
 
@@ -614,7 +614,7 @@ class Parsedown
                 if ($listStart !== '1')
                 {
                     if (
-                        isset($CurrentBlock)
+                        !empty($CurrentBlock)
                         and $CurrentBlock['type'] === 'Paragraph'
                         and ! isset($CurrentBlock['interrupted'])
                     ) {
@@ -808,9 +808,9 @@ class Parsedown
     #
     # Setext
 
-    protected function blockSetextHeader($Line, ?array $Block = null)
+    protected function blockSetextHeader($Line, array $Block = array())
     {
-        if ( ! isset($Block) or $Block['type'] !== 'Paragraph' or isset($Block['interrupted']))
+        if (empty($Block) or $Block['type'] !== 'Paragraph' or isset($Block['interrupted']))
         {
             return;
         }
@@ -894,9 +894,9 @@ class Parsedown
     #
     # Table
 
-    protected function blockTable($Line, ?array $Block = null)
+    protected function blockTable($Line, array $Block = array())
     {
-        if ( ! isset($Block) or $Block['type'] !== 'Paragraph' or isset($Block['interrupted']))
+        if (empty($Block) or $Block['type'] !== 'Paragraph' or isset($Block['interrupted']))
         {
             return;
         }
