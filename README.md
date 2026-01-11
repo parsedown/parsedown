@@ -96,7 +96,7 @@ It passes most of the CommonMark tests. Most of the tests that don't pass deal w
 ### Who uses it?
 
 [Laravel Framework](https://laravel.com/),
-[Bolt CMS](https://bolt.cm/),
+[Bolt CMS](https://boltcms.io),
 [Grav CMS](https://getgrav.org/),
 [Herbie CMS](https://herbie.tebe.ch/),
 [Kirby CMS](https://getkirby.com/),
