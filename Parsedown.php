@@ -330,7 +330,7 @@ class Parsedown
             }
         }
 
-        return $Component['element'];
+        return $Component['element'] ?? [];
     }
 
     protected function isBlockContinuable($Type)
