@@ -23,6 +23,9 @@
             "role": "Fork Maintainer"
         }
     ],
+    "replace": {
+        "erusev/parsedown": "*"
+    },
     "require": {
         "php": ">=7.1",
         "ext-mbstring": "*"
